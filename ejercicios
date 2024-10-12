@@ -1,0 +1,45 @@
+1. Procedimiento Almacenado: Listado de Profesores y Cursos
+
+Crea un procedimiento almacenado que reciba un parámetro opcional para el nombre de un profesor. Si el parámetro es proporcionado, muestra todos los cursos que ese profesor dicta. Si no se proporciona, muestra la lista de todos los profesores con sus cursos correspondientes.
+2. Procedimiento Almacenado: Inscripciones por Estudiante
+
+Crea un procedimiento que reciba el estudiante_id como parámetro y devuelva un listado de todos los cursos en los que el estudiante está inscrito, incluyendo el nombre del curso, créditos y la fecha de inscripción.
+3. Trigger: Validar Inscripciones
+
+Crea un trigger que, antes de insertar una inscripción, valide que el curso no exceda el límite de capacidad. Si el curso ya ha alcanzado su capacidad máxima, el trigger debe cancelar la inscripción y emitir un mensaje de error.
+4. Índices: Optimización de Consultas
+
+Crea un índice en la columna profesor_id de la tabla Cursos. Luego, realiza una consulta que devuelva todos los cursos de un profesor específico, comparando el tiempo de ejecución antes y después de crear el índice.
+5. Procedimiento Almacenado: Promedio de Créditos por Departamento
+
+Crea un procedimiento que calcule el promedio de créditos por departamento (usando la relación entre profesores y departamentos). El procedimiento debe aceptar un parámetro opcional para filtrar por un departamento específico.
+6. Trigger: Actualización Automática de Créditos
+
+Crea un trigger que, cuando se actualice la tabla de Cursos y se cambie el valor de créditos de un curso, actualice automáticamente el promedio de créditos en una tabla separada que guarde el promedio de créditos por estudiante.
+7. Vistas: Estudiantes sin Inscripciones
+
+Crea una vista que muestre a todos los estudiantes que no están inscritos en ningún curso. Esta vista debe ser actualizada automáticamente cuando cambien las inscripciones.
+8. Procedimiento Almacenado: Buscar Estudiantes por Parte del Nombre
+
+Crea un procedimiento que acepte una parte del nombre del estudiante como parámetro y devuelva todos los estudiantes cuyo nombre contenga esa parte, junto con su correo electrónico.
+9. Consulta con Funciones de Ventana: Ranking de Cursos por Estudiantes Inscritos
+
+Crea una consulta que utilice funciones de ventana para mostrar un ranking de los cursos según la cantidad de estudiantes inscritos. La consulta debe incluir el nombre del curso, el número de estudiantes y la posición en el ranking.
+10. Procedimiento Almacenado: Historial de Inscripciones
+
+Crea un procedimiento que acepte un parámetro estudiante_id y devuelva el historial de inscripciones de dicho estudiante, incluyendo el nombre del curso, los créditos y la fecha de inscripción. Además, agrega un parámetro opcional para filtrar las inscripciones por un rango de fechas.
+11. Transacciones: Inscripción Masiva de Estudiantes
+
+Crea un procedimiento almacenado que permita inscribir a varios estudiantes en un curso específico dentro de una transacción. Si alguno de los estudiantes no puede ser inscrito (por ejemplo, si el curso está lleno), la transacción debe ser revertida y no debe inscribir a ningún estudiante.
+12. Vistas: Profesores y Departamentos
+
+Crea una vista que muestre el listado de profesores junto con el departamento al que pertenecen y los cursos que dictan, permitiendo filtrar por departamento si es necesario.
+13. Consulta con Subconsultas: Estudiantes con Mayor Cantidad de Créditos
+
+Crea una consulta que devuelva a los estudiantes con la mayor cantidad de créditos acumulados, mostrando el nombre del estudiante y la cantidad total de créditos.
+14. Procedimiento Almacenado: Profesores con Mayor Cantidad de Cursos
+
+Crea un procedimiento que devuelva los 3 profesores con la mayor cantidad de cursos dictados. El procedimiento debe incluir la posibilidad de ordenar de forma ascendente o descendente según el parámetro proporcionado.
+15. Trigger: Restricción de Inscripción en Múltiples Cursos
+
+Crea un trigger que impida que un estudiante se inscriba en dos cursos que tengan la misma fecha y hora, lanzando un error si se intenta una inscripción que entre en conflicto con esta restricción.
