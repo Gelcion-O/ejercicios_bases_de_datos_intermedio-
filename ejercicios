@@ -43,3 +43,17 @@ Crea un procedimiento que devuelva los 3 profesores con la mayor cantidad de cur
 15. Trigger: Restricción de Inscripción en Múltiples Cursos
 
 Crea un trigger que impida que un estudiante se inscriba en dos cursos que tengan la misma fecha y hora, lanzando un error si se intenta una inscripción que entre en conflicto con esta restricción.
+
+RESUELTOS:
+
+Ejercicio 2:
+DELIMITER $$
+create procedure historial_estudiante_inscripciones(
+in id int
+)
+begin
+	select e.nombre, e.correo, c.creditos, i.fecha_inscripcion, c.nombre from inscripciones i, estudiantes e, cursos c
+	where e.estudiante_id = id
+    and i.estudiante_id = id;
+end $$
+DELIMITER ;
